@@ -26,20 +26,20 @@ namespace Tic_Tac_Toe
 
         private void buttonClick(object sender, EventArgs e)
         {
-            Button theButtton = (Button)sender;
+            Button theButton = (Button)sender;
 
             if (playerTurn)
             {
-                theButtton.Text = "X";
-                theButtton.Enabled = false;
+                theButton.Text = "X";
+                theButton.Enabled = false;
             }
             else
             {
-                theButtton.Text = "O";
-                theButtton.Enabled = false;
+                theButton.Text = "O";
+                theButton.Enabled = false;
             }
 
-            turnCount++;//for the draws, the maxium play is 9
+            turnCount++;//for the draws, the maximum play is 9
             playerTurn = !playerTurn;
             checkWinner();
         }
@@ -47,13 +47,13 @@ namespace Tic_Tac_Toe
         private void checkWinner()
         {
             /*
-            foreach(Control x in Controls)//emunmeration of all controls{}
+            foreach(Control x in Controls)//enumeration of all controls{}
             */
             bool weHaveWinner = false;
 
             //Switch possible ?
 
-            //---
+            //---n
             if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A2.Enabled))
                 weHaveWinner = true;
             else if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B2.Enabled))
